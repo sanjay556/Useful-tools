@@ -1,0 +1,37 @@
+term screen-256color
+
+autodetach on
+startup_message off
+defscrollback 10000
+screen -t bash  0
+screen -t bash  1
+screen -t bash  2
+screen -t bash  3
+screen -t bash  4
+
+select 0
+
+
+hardstatus on
+hardstatus alwayslastline
+hardstatus string "%{= w} %{R}[%m-%d-%y]%{G}[%H] %{G} %-Lw%{=r}%n%f* %t%{-}%+LW"
+
+# hardstatus string  '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B} %m-%d %{W}%c %{g}]'
+
+
+# change window with F11 F12
+bindkey -k F1  prev
+bindkey -k F2  next
+
+bindkey "^[," prev
+bindkey "^[." next
+
+
+
+# Ctrl-Tab
+bindkey "^[[27;5;9~" next
+
+
+
+# Ctrl-Shift-Tab
+bindkey "^[;3D" prev

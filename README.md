@@ -7,7 +7,7 @@
 # Run below command 
 screen 
 
-<Ctrl+d> to detach from screen 
+<Ctrl+a> d to detach from screen 
 
 # Reattach to the screen run below command 
 screen -xr 
